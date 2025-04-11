@@ -3,125 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sneaker Store - Cửa hàng giày thể thao chính hãng</title>
+    <title>Sneaker Shop</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Sneaker Store</h1>
+            <h1>Sneaker Shop</h1>
             <nav>
                 <ul>
-                    <li><a href="#" class="active">Trang chủ</a></li>
-                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Sản phẩm</a></li>
                     <li><a href="#">Liên hệ</a></li>
-                    <li><a href="#"><i class="fas fa-shopping-cart"></i> Giỏ hàng</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h2>Sneaker Store</h2>
-                <p>Nơi mua sắm giày thể thao chính hãng uy tín</p>
-                <a href="#products" class="btn">Xem sản phẩm</a>
-            </div>
-        </section>
-
-        <section class="filters container">
+    <main class="container">
+        <section class="filters">
             <div class="brand-filter">
-                <h3>Thương hiệu</h3>
+                <h2>Thương hiệu</h2>
                 <ul>
                     <li><a href="#" data-brand="nike">Nike</a></li>
                     <li><a href="#" data-brand="adidas">Adidas</a></li>
                     <li><a href="#" data-brand="puma">Puma</a></li>
-                    <li><a href="#" data-brand="reebok">Reebok</a></li>
-                    <li><a href="#" data-brand="new-balance">New Balance</a></li>
-                    <li><a href="#" data-brand="converse">Converse</a></li>
-                    <li><a href="#" data-brand="vans">Vans</a></li>
-                    <li><a href="#" data-brand="asics">Asics</a></li>
-                    <li><a href="#" data-brand="skechers">Skechers</a></li>
-                    <li><a href="#" data-brand="under-armour">Under Armour</a></li>
-                    <li><a href="#" data-brand="fila">Fila</a></li>
-                    <li><a href="#" data-brand="jordan">Jordan Brand</a></li>
-                    <li><a href="#" data-brand="saucony">Saucony</a></li>
-                    <li><a href="#" data-brand="mizuno">Mizuno</a></li>
-                    <li><a href="#" data-brand="hoka">Hoka One One</a></li>
-                    <li><a href="#" data-brand="on-running">On Running</a></li>
-                    <li><a href="#" data-brand="balenciaga">Balenciaga</a></li>
-                    <li><a href="#" data-brand="gucci">Gucci</a></li>
-                    <li><a href="#" data-brand="yeezy">Yeezy</a></li>
-                    <li><a href="#" data-brand="timberland">Timberland</a></li>
+                    <li><a href="#" data-brand="newbalance">New Balance</a></li>
                 </ul>
-            </div>
-
-            <div class="price-filter">
-                <h3>Lọc theo giá</h3>
-                <select id="price-range">
-                    <option value="all">Tất cả giá</option>
-                    <option value="0-1000000">Dưới 1 triệu VNĐ</option>
-                    <option value="1000000-3000000">1 - 3 triệu VNĐ</option>
-                    <option value="3000000-5000000">3 - 5 triệu VNĐ</option>
-                    <option value="5000000-10000000">5 - 10 triệu VNĐ</option>
-                    <option value="10000000+">Trên 10 triệu VNĐ</option>
-                </select>
             </div>
         </section>
 
-        <section class="products" id="products">
-    <div class="container">
-      <h2>Sản phẩm nổi bật</h2>
-      <div class="product-grid">
-        <!-- Nike Products -->
-        <div class="product-card" data-brand="nike">
-          <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/99486859-0ff3-46b4-949b-2d16af2ad421/dunk-low-shoes-t4Rq0C.png" alt="Nike Dunk Low" />
-          <h3>Nike Dunk Low</h3>
-          <p>2.800.000đ</p>
-          <a href="#" class="btn">Mua ngay</a>
-        </div>
-        <div class="product-card" data-brand="nike">
-          <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/5bf8e30b-76a6-4641-8d8d-58dabec8d3c2/air-force-1-07-shoes-WrLlWX.png" alt="Nike Air Force 1" />
-          <h3>Nike Air Force 1</h3>
-          <p>3.200.000đ</p>
-          <a href="#" class="btn">Mua ngay</a>
-        </div>
-        <!-- Adidas Products -->
-        <div class="product-card" data-brand="adidas">
-          <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/09c5ea6df1bd4be6baaaac5e003e7047_9366/Forum_Low_Shoes_White_FY7756_01_standard.jpg" alt="Adidas Forum Low" />
-          <h3>Adidas Forum Low</h3>
-          <p>2.500.000đ</p>
-          <a href="#" class="btn">Mua ngay</a>
-        </div>
-        <div class="product-card" data-brand="adidas">
-          <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/68ae7ea7849b43eca70aac1e00f5146d_9366/Stan_Smith_Shoes_White_FX5502_01_standard.jpg" alt="Adidas Stan Smith" />
-          <h3>Adidas Stan Smith</h3>
-          <p>2.300.000đ</p>
-          <a href="#" class="btn">Mua ngay</a>
-        </div>
-        <!-- Puma Products -->
-        <div class="product-card" data-brand="puma">
-          <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1350,h_1350/global/374915/01/sv01/fnd/IND/fmt/png/Suede-Classic-XXI-Sneakers" alt="Puma Suede Classic" />
-          <h3>Puma Suede Classic</h3>
-          <p>1.900.000đ</p>
-          <a href="#" class="btn">Mua ngay</a>
-        </div>
-        <div class="product-card" data-brand="puma">
-          <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1350,h_1350/global/380591/01/sv01/fnd/IND/fmt/png/RS-X-Sneakers" alt="Puma RS-X" />
-          <h3>Puma RS-X</h3>
-          <p>2.700.000đ</p>
-          <a href="#" class="btn">Mua ngay</a>
-        </div>
-      </div>
-    </div>
-  </section>
+        <section class="products">
+            <div class="product-grid">
+                <div class="product-card" data-brand="nike">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Nike Shoes">
+                    <h3>Nike Air Max</h3>
+                    <p class="price">3,200,000₫</p>
+                    <button class="btn-buy">Mua ngay</button>
+                </div>
+                <div class="product-card" data-brand="adidas">
+                    <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5" alt="Adidas Shoes">
+                    <h3>Adidas Ultraboost</h3>
+                    <p class="price">2,800,000₫</p>
+                    <button class="btn-buy">Mua ngay</button>
+                </div>
+                <div class="product-card" data-brand="puma">
+                    <img src="https://images.unsplash.com/photo-1608379743498-fa70a5cd60dd" alt="Puma Shoes">
+                    <h3>Puma RS-X</h3>
+                    <p class="price">2,500,000₫</p>
+                    <button class="btn-buy">Mua ngay</button>
+                </div>
+                <div class="product-card" data-brand="newbalance">
+                    <img src="https://images.unsplash.com/photo-1539185441755-769473a23570" alt="New Balance Shoes">
+                    <h3>New Balance 574</h3>
+                    <p class="price">2,600,000₫</p>
+                    <button class="btn-buy">Mua ngay</button>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Sneaker Store. Tất cả quyền được bảo lưu.</p>
+            <p>&copy; 2024 Sneaker Shop. Tất cả quyền được bảo lưu.</p>
         </div>
     </footer>
 
