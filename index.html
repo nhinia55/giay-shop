@@ -3,22 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sneaker Shop</title>
+    <title>Sneaker Pro - Giày Thể Thao Chính Hãng</title>
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="auth.js"></script>
+    <script type="module" src="cart.js"></script>
+    <script type="module" src="products.js"></script>
+    <script type="module" src="script.js"></script>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Sneaker Shop</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Trang chủ</a></li>
-                    <li><a href="#">Sản phẩm</a></li>
-                    <li><a href="#">Liên hệ</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div class="container">
+      <h1>Sneaker Pro</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Trang chủ</a></li>
+          <li><a href="#products">Sản phẩm</a></li>
+          <li><a href="#about">Giới thiệu</a></li>
+          <li><a href="#contact">Liên hệ</a></li>
+          <li class="auth-links">
+            <a href="#" id="loginBtn" class="show-when-logged-out">Đăng nhập</a>
+            <a href="#" id="registerBtn" class="show-when-logged-out">Đăng ký</a>
+            <a href="#" id="cartBtn" class="show-when-logged-in">Giỏ hàng (<span id="cartCount">0</span>)</a>
+            <a href="#" id="ordersBtn" class="show-when-logged-in">Đơn hàng</a>
+            <a href="#" id="logoutBtn" class="show-when-logged-in">Đăng xuất</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
     <main class="container">
         <section class="filters">
@@ -33,39 +45,70 @@
             </div>
         </section>
 
-        <section class="products">
-            <div class="product-grid">
-                <div class="product-card" data-brand="nike">
-                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Nike Shoes">
-                    <h3>Nike Air Max</h3>
-                    <p class="price">3,200,000₫</p>
-                    <button class="btn-buy">Mua ngay</button>
-                </div>
-                <div class="product-card" data-brand="adidas">
-                    <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5" alt="Adidas Shoes">
-                    <h3>Adidas Ultraboost</h3>
-                    <p class="price">2,800,000₫</p>
-                    <button class="btn-buy">Mua ngay</button>
-                </div>
-                <div class="product-card" data-brand="puma">
-                    <img src="https://images.unsplash.com/photo-1608379743498-fa70a5cd60dd" alt="Puma Shoes">
-                    <h3>Puma RS-X</h3>
-                    <p class="price">2,500,000₫</p>
-                    <button class="btn-buy">Mua ngay</button>
-                </div>
-                <div class="product-card" data-brand="newbalance">
-                    <img src="https://images.unsplash.com/photo-1539185441755-769473a23570" alt="New Balance Shoes">
-                    <h3>New Balance 574</h3>
-                    <p class="price">2,600,000₫</p>
-                    <button class="btn-buy">Mua ngay</button>
-                </div>
-            </div>
-        </section>
+        <section class="products" id="products">
+    <div class="container">
+      <h2>Sản phẩm nổi bật</h2>
+      <div class="brand-filter">
+        <ul></ul>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </div>
+  </section>
+
+  <!-- Modal Đăng nhập -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <h2>Đăng nhập</h2>
+      <form id="loginForm">
+        <input type="text" id="loginUsername" placeholder="Tên đăng nhập" required>
+        <input type="password" id="loginPassword" placeholder="Mật khẩu" required>
+        <button type="submit" class="btn">Đăng nhập</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Đăng ký -->
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <h2>Đăng ký</h2>
+      <form id="registerForm">
+        <input type="text" id="registerUsername" placeholder="Tên đăng nhập" required>
+        <input type="email" id="registerEmail" placeholder="Email" required>
+        <input type="password" id="registerPassword" placeholder="Mật khẩu" required>
+        <button type="submit" class="btn">Đăng ký</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Giỏ hàng -->
+  <div id="cartModal" class="modal">
+    <div class="modal-content">
+      <h2>Giỏ hàng</h2>
+      <div id="cart-container"></div>
+    </div>
+  </div>
+
+  <!-- Modal Đơn hàng -->
+  <div id="ordersModal" class="modal">
+    <div class="modal-content">
+      <h2>Đơn hàng của bạn</h2>
+      <div id="order-container"></div>
+    </div>
+  </div>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Sneaker Shop. Tất cả quyền được bảo lưu.</p>
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Thông tin liên hệ</h3>
+                    <p>Hotline: 0923471728</p>
+                    <p>Email: sneakersvien@gmail.com</p>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Sneaker Pro. Bản quyền được bảo hộ.</p>
+                </div>
+            </div>
         </div>
     </footer>
 
